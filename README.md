@@ -1,2 +1,2 @@
 # golib
-golib
+golib pkg
