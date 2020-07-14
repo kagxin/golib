@@ -1,8 +1,9 @@
 package response
 
 import (
-	"golib/web/common/eno"
 	"net/http"
+
+	"github.com/kagxin/golib/web/common/eno"
 
 	"github.com/gin-gonic/gin"
 )
