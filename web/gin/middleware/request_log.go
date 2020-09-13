@@ -40,8 +40,8 @@ func RequestLog(getUserID func(*gin.Context) int, getPlatform func(*gin.Context)
 				printLog("requestLog ioutil.ReadAll(c.Request.Body) error:%#v")
 			}
 			c.Request.Body = ioutil.NopCloser(bytes.NewBuffer(body))
-			requestLogString = fmt.Sprintf("[Request]UserID:%d,Method:%s,RequestURI:%s,Body:%s;",
-				getUserID(c), c.Request.Method, c.Request.RequestURI, string(body))
+			requestLogString = fmt.Sprintf("[Request]UserID:%d,Platform:%s,Method:%s,RequestURI:%s,Body:%s;",
+				getUserID(c), getPlatform(c), c.Request.Method, c.Request.RequestURI, string(body))
 
 			blw = &bodyLogWriter{body: bytes.NewBufferString(""), ResponseWriter: c.Writer}
 			c.Writer = blw

@@ -31,5 +31,7 @@ func Test_RequestLog(t *testing.T) {
 	})
 	body := strings.NewReader("i am request body.")
 	w := tool.PerformRequest(router, "POST", "/", body)
-	fmt.Println(w)
+	w1 := tool.PerformRequest(router, "POST", "/", body)
+	w2 := tool.PerformRequest(router, "POST", "/", body)
+	fmt.Println(w, w1, w2)
 }
