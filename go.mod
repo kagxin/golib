@@ -2,4 +2,4 @@ module github.com/kagxin/golib
 
 go 1.14
 
-require github.com/gin-gonic/gin v1.6.3
+require github.com/gin-gonic/gin v1.7.0
